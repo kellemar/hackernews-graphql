@@ -1,0 +1,9 @@
+#endpoint: ''
+endpoint: https://us1.prisma.sh/alvin-de-cruz-afc52a/database/dev
+
+datamodel: datamodel.graphql
+
+# Deploy hook
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
